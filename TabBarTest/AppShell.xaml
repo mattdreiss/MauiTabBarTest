@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TabBarTest.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TabBarTest"
+    FlyoutBehavior="Disabled"
+    TabBarIsVisible="True"
+    Title="TabBarTest">
+    <TabBar Shell.TabBarForegroundColor="Green"
+            Shell.TabBarUnselectedColor="Red">
+        <Tab Title="CollectionView">
+            <ShellContent
+                Title="Collection Grid"
+                ContentTemplate="{DataTemplate local:CollectionViewPage}"
+                Route="CollectionViewPage" />
+        </Tab>
+        <Tab Title="SyncfusionListPage">
+            <ShellContent
+                Title="Syncfusion Grid"
+                ContentTemplate="{DataTemplate local:SyncfusionListPage}"
+                Route="SyncfusionListPage" />
+        </Tab>
+        <Tab Title="CollectionViewOnly">
+            <ShellContent
+                Title="Collection Only"
+                ContentTemplate="{DataTemplate local:CollectionViewOnlyPage}"
+                Route="CollectionViewOnlyPage" />
+        </Tab>
+        <Tab Title="TwoSectionGrid">
+            <ShellContent
+                Title="Two Section Grid"
+                ContentTemplate="{DataTemplate local:TwoSectionGrid}"
+                Route="TwoSectionGrid" />
+        </Tab>
+    </TabBar>
+</Shell>
